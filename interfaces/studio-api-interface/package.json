@@ -1,0 +1,19 @@
+{
+  "name": "@bigration/studio-api-interface",
+  "version": "1.0.2-2024-04-23-18-02-03",
+  "description": "OpenAPI client for @bigration/studio-api-interface",
+  "author": "OpenAPI-Generator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+  },
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^4.0"
+  }
+}

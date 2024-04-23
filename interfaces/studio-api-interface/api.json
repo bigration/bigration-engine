@@ -1,0 +1,12 @@
+{
+        "npmName": "@bigration/studio-api-interface",
+        "npmVersion": "1.0.2-2024-04-23-18-02-03",
+        "snapshot": false,
+        "supportsES6": false,
+        "modelPropertyNaming": "original",
+        "enumPropertyNaming": "original",
+        "removeEnumValuePrefix": "false",
+        "nullSafeAdditionalProps": true,
+        "withInterfaces": true,
+        "typescriptThreePlus": "true"
+      }
