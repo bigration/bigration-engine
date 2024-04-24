@@ -5,16 +5,8 @@ import {
   MultiConditionalPathAction,
 } from '@bigration/studio-api-interface';
 import { multiConditionalPathTask } from '../multi-conditional-path-task';
-import { MessageActionFlowType } from '../../types';
-import { initCache } from '../../cache';
-
-jest.mock('@bigration/workflow-engine-utils', () => {
-  const originalModule = jest.requireActual('@bigration/workflow-engine-utils');
-  return {
-    ...originalModule,
-    logEvent: jest.fn().mockReturnValue('works!'),
-  };
-});
+import { MessageActionFlowType } from '../../../types';
+import { initCache } from '../../../cache';
 
 const messageAction: MessageActionFlowType = {
   sourceId: '57567567',

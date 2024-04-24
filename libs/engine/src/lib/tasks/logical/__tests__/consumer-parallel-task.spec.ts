@@ -1,18 +1,10 @@
-import { initCache, initNewInstanceRunCache } from '../../cache';
-import { MessageActionFlowType } from '../../types';
+import { initCache, initNewInstanceRunCache } from '../../../cache';
+import { MessageActionFlowType } from '../../../types';
 import * as parallelTask from '../consumer-parallel-task';
 import {
   InstanceActionModel,
   InstanceEngineMessageDTO,
 } from '@bigration/studio-api-interface';
-
-jest.mock('@bigration/workflow-engine-utils', () => {
-  const originalModule = jest.requireActual('@bigration/workflow-engine-utils');
-  return {
-    ...originalModule,
-    logEvent: jest.fn().mockReturnValue('works!'),
-  };
-});
 
 const messageAction: MessageActionFlowType = {
   sourceId: '57567567',
