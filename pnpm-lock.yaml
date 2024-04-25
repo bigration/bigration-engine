@@ -109,6 +109,9 @@ devDependencies:
   '@types/node':
     specifier: ~18.16.9
     version: 18.16.9
+  '@types/node-schedule':
+    specifier: ^2.1.7
+    version: 2.1.7
   '@types/nodemailer':
     specifier: ^6.4.14
     version: 6.4.14
@@ -3685,6 +3688,15 @@ packages:
       '@types/node': 18.16.9
       form-data: 4.0.0
     dev: false
+
+  /@types/node-schedule@2.1.7:
+    resolution:
+      {
+        integrity: sha512-G7Z3R9H7r3TowoH6D2pkzUHPhcJrDF4Jz1JOQ80AX0K2DWTHoN9VC94XzFAPNMdbW9TBzMZ3LjpFi7RYdbxtXA==,
+      }
+    dependencies:
+      '@types/node': 18.16.9
+    dev: true
 
   /@types/node@18.16.9:
     resolution:
