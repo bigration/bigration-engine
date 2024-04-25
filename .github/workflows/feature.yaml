@@ -1,0 +1,49 @@
+on:
+  push:
+    branches-ignore:
+      - main
+  pull_request:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  install-test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          node-version: '20.x'
+      # Connect your workspace on nx.app and uncomment this to enable task distribution.
+      # The "--stop-agents-after" is optional, but allows idle agents to shut down once the "build" targets have been requested
+      # - run: pnpm exec nx-cloud start-ci-run --distribute-on="5 linux-medium-js" --stop-agents-after="build"
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
+      # Cache node_modules
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+      - run: pnpm preinstall
+      - run: pnpm install --frozen-lockfile
+      - uses: nrwl/nx-set-shas@v4
+
+      - run: git branch --track main origin/main
+        if: ${{ github.event_name == 'pull_request' }}
+
+      - run: pnpm exec nx affected -t lint test --exclude=bigration-engine --exclude=@bigration/studio-api-interface
+      - run: pnpm nx build bigration-engine
+      - run: sh build-engine.sh
+
+      - name: Engine Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: engine-build-artifact
+          path: |
+            dist/apps/bigration-engine
+            deployment/
+          retention-days: 1
