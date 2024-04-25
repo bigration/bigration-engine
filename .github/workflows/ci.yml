@@ -37,5 +37,6 @@ jobs:
       - run: git branch --track main origin/main
         if: ${{ github.event_name == 'pull_request' }}
 
-      - run: pnpm exec nx affected -t lint test build --exclude=bigration-engine --exclude=@bigration/studio-api-interface
+      - run: pnpm exec nx affected -t lint test --exclude=bigration-engine --exclude=@bigration/studio-api-interface
+      - run: pnpm nx build bigration-engine
       - run: sh build-engine.sh
