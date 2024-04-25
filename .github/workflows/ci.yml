@@ -11,13 +11,13 @@ permissions:
   contents: read
 
 jobs:
-  main:
+  install-test-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
+          node-version: '20.x'
       # Connect your workspace on nx.app and uncomment this to enable task distribution.
       # The "--stop-agents-after" is optional, but allows idle agents to shut down once the "build" targets have been requested
       # - run: pnpm exec nx-cloud start-ci-run --distribute-on="5 linux-medium-js" --stop-agents-after="build"
@@ -38,3 +38,4 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
 
       - run: pnpm exec nx affected -t lint test build --exclude=bigration-engine --exclude=@bigration/studio-api-interface
+      - run: sh build-engine.sh
