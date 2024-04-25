@@ -8,32 +8,8 @@ import {
   MailConfigurationOptionsPriorityEnum,
 } from '@bigration/studio-api-interface';
 import * as nodemailer from 'nodemailer';
-import { MessageActionFlowType } from '../../types';
-import { initCache, initNewInstanceRunCache } from '../../cache';
-
-jest.mock('@bigration/workflow-engine-utils', () => {
-  const originalModule = jest.requireActual('@bigration/workflow-engine-utils');
-  return {
-    ...originalModule,
-    logEvent: jest.fn().mockReturnValue('works!'),
-  };
-});
-
-jest.mock('@bigration/workflow-engine-utils', () => {
-  const originalModule = jest.requireActual('@bigration/workflow-engine-utils');
-  return {
-    ...originalModule,
-    logEvent: jest.fn().mockReturnValue('works!'),
-  };
-});
-
-jest.mock('@bigration/workflow-engine-utils', () => {
-  const originalModule = jest.requireActual('@bigration/workflow-engine-utils');
-  return {
-    ...originalModule,
-    logEvent: jest.fn().mockReturnValue('works!'),
-  };
-});
+import { MessageActionFlowType } from '../../../types';
+import { initCache, initNewInstanceRunCache } from '../../../cache';
 
 const messageAction: MessageActionFlowType = {
   sourceId: '57567567',

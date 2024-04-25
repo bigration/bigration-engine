@@ -91,6 +91,9 @@ devDependencies:
   '@swc/helpers':
     specifier: ~0.5.2
     version: 0.5.2
+  '@types/amqplib':
+    specifier: ^0.10.5
+    version: 0.10.5
   '@types/handlebars-helpers':
     specifier: ^0.5.6
     version: 0.5.6
@@ -100,6 +103,9 @@ devDependencies:
   '@types/node':
     specifier: ~18.16.9
     version: 18.16.9
+  '@types/nodemailer':
+    specifier: ^6.4.14
+    version: 6.4.14
   '@typescript-eslint/eslint-plugin':
     specifier: ^7.3.0
     version: 7.3.0(@typescript-eslint/parser@7.3.0)(eslint@8.57.0)(typescript@5.4.5)
@@ -3547,6 +3553,15 @@ packages:
       }
     dev: true
 
+  /@types/amqplib@0.10.5:
+    resolution:
+      {
+        integrity: sha512-/cSykxROY7BWwDoi4Y4/jLAuZTshZxd8Ey1QYa/VaXriMotBDoou7V/twJiOSHzU6t1Kp1AHAUXGCgqq+6DNeg==,
+      }
+    dependencies:
+      '@types/node': 18.16.9
+    dev: true
+
   /@types/babel__core@7.20.5:
     resolution:
       {
@@ -3663,6 +3678,15 @@ packages:
       {
         integrity: sha512-IeB32oIV4oGArLrd7znD2rkHQ6EDCM+2Sr76dJnrHwv9OHBTTM6nuDLK9bmikXzPa0ZlWMWtRGo/Uw4mrzQedA==,
       }
+
+  /@types/nodemailer@6.4.14:
+    resolution:
+      {
+        integrity: sha512-fUWthHO9k9DSdPCSPRqcu6TWhYyxTBg382vlNIttSe9M7XfsT06y0f24KHXtbnijPGGRIcVvdKHTNikOI6qiHA==,
+      }
+    dependencies:
+      '@types/node': 18.16.9
+    dev: true
 
   /@types/parse-json@4.0.2:
     resolution:

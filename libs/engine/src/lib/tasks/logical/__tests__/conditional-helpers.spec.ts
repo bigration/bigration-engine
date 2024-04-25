@@ -5,22 +5,6 @@ import {
 import { executeExpression, isAPathValid } from '../conditional-helpers';
 import { ParseResults } from '../../../utils';
 
-jest.mock('@bigration/workflow-engine-utils', () => {
-  const originalModule = jest.requireActual('@bigration/workflow-engine-utils');
-  return {
-    ...originalModule,
-    logEvent: jest.fn().mockReturnValue('works!'),
-  };
-});
-
-jest.mock('@bigration/workflow-engine-utils', () => {
-  const originalModule = jest.requireActual('@bigration/workflow-engine-utils');
-  return {
-    ...originalModule,
-    logEvent: jest.fn().mockReturnValue('works!'),
-  };
-});
-
 describe('consumer-loop-task', () => {
   beforeEach(() => {
     jest.clearAllMocks();

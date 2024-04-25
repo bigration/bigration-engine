@@ -11,10 +11,6 @@ import {
 import * as utils from './../../../logger/logs-producer';
 import { consumerGlobalVariablesUpdates } from '../consumer-global-variables-updates-task';
 
-jest.mock('@bigration/workflow-engine-utils', () => ({
-  inputValueParser: jest.fn(),
-}));
-
 const messageAction: MessageActionFlowType = {
   sourceId: '555',
   targetId: '123',

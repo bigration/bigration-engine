@@ -3,10 +3,10 @@ import {
   InstanceActionModel,
   InstanceEngineMessageDTO,
 } from '@bigration/studio-api-interface';
-import { MessageActionFlowType } from '../../types';
-import { initCache, initNewInstanceRunCache } from '../../cache';
+import { MessageActionFlowType } from '../../../types';
+import { initCache, initNewInstanceRunCache } from '../../../cache';
 import { consumerFilterTask } from '../consumer-filter-task';
-import * as utils from '../../logger/logs-producer';
+import * as utils from '../../../logger/logs-producer';
 
 const messageAction: MessageActionFlowType = {
   sourceId: '57567567',
