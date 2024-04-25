@@ -6,8 +6,8 @@ import {
   InstanceActionModel,
   InstanceEngineMessageDTO,
 } from '@bigration/studio-api-interface';
-import { MessageActionFlowType } from '../../types';
-import { initCache, initNewInstanceRunCache } from '../../cache';
+import { MessageActionFlowType } from '../../../types';
+import { initCache, initNewInstanceRunCache } from '../../../cache';
 
 const messageAction: MessageActionFlowType = {
   sourceId: '57567567',

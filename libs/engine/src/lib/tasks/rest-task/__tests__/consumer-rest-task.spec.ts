@@ -89,9 +89,14 @@ describe('consumer-rest-task', () => {
       instanceAction,
       inputParameterValues
     );
-
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     expect(response.outputParameterValues.status).toBe(200);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     expect(response.outputParameterValues.headers).toBeDefined();
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     expect(response.outputParameterValues.data).toBeDefined();
 
     expect(logSpy).toHaveBeenCalledWith({
@@ -169,9 +174,14 @@ describe('consumer-rest-task', () => {
       instanceAction,
       inputParameterValues
     );
-
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     expect(response.outputParameterValues.status).toBe(200);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     expect(response.outputParameterValues.headers).toBeDefined();
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     expect(response.outputParameterValues.data).toBeDefined();
 
     expect(logSpy).toHaveBeenCalledWith({

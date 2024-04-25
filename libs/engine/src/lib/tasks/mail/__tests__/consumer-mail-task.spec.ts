@@ -125,9 +125,14 @@ describe('consumer-mail-task', () => {
       inputParameterValues
     );
 
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     expect(response.outputParameterValues.accepted).toHaveLength(1);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     expect(response.outputParameterValues.rejected).toHaveLength(0);
-
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     expect(response.outputParameterValues.ehlo).toEqual([
       'PIPELINING',
       '8BITMIME',
@@ -224,8 +229,11 @@ describe('consumer-mail-task', () => {
       instanceAction,
       inputParameterValues
     );
-
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     expect(response.outputParameterValues.accepted).toHaveLength(1);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     expect(response.outputParameterValues.rejected).toHaveLength(0);
 
     // expect(logEvent).toHaveBeenCalledWith({

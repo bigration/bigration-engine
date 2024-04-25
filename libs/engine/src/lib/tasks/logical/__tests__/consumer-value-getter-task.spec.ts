@@ -3,10 +3,10 @@ import {
   InstanceEngineMessageDTO,
   ValueGetterAction,
 } from '@bigration/studio-api-interface';
-import { MessageActionFlowType } from '../../types';
-import { initCache, initNewInstanceRunCache } from '../../cache';
+import { MessageActionFlowType } from '../../../types';
+import { initCache, initNewInstanceRunCache } from '../../../cache';
 import { consumerValueGetterTask } from '../consumer-value-getter-task';
-import * as utils from '../../logger/logs-producer';
+import * as utils from '../../../logger/logs-producer';
 
 const messageAction: MessageActionFlowType = {
   sourceId: '57567567',

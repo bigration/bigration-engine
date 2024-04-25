@@ -4,10 +4,6 @@ import { consumerLoggerTask } from '../consumer-logger-task';
 import { InstanceActionModel } from '@bigration/studio-api-interface';
 import * as utils from './../../../logger/logs-producer';
 
-jest.mock('@bigration/workflow-engine-utils', () => ({
-  inputValueParser: jest.fn(),
-}));
-
 const messageAction: MessageActionFlowType = {
   sourceId: '555',
   targetId: '123',

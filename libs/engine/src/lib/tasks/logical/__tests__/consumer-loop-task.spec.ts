@@ -2,9 +2,9 @@ import {
   getEngineCache,
   initCache,
   saveInstanceTempActionVariable,
-} from '../../cache';
-import * as tempCache from '../../cache/instance-temp-variables-cache';
-import { MessageActionFlowType } from '../../types';
+} from '../../../cache';
+import * as tempCache from '../../../cache/instance-temp-variables-cache';
+import { MessageActionFlowType } from '../../../types';
 import { consumerLoopTask } from '../consumer-loop-task';
 
 import { Flow, InstanceActionModel } from '@bigration/studio-api-interface';
