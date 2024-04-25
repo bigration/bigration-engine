@@ -73,5 +73,6 @@ jobs:
         with:
           context: .
           file: deployment/bigration-engine/Dockerfile
-          push: false
-          tags: user/app:latest
+          push: true
+          tags: bigration/engine:latest
+          attests: type=sbom,mode=max
