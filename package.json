@@ -1,7 +1,7 @@
 {
   "name": "@bigration-engine/source",
-  "version": "0.0.0",
-  "license": "MIT",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
   "scripts": {
     "prepare": "husky",
     "preinstall": "cd interfaces/studio-api-interface && npm install --prefix && npm run build"

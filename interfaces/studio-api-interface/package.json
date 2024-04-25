@@ -1,6 +1,6 @@
 {
   "name": "@bigration/studio-api-interface",
-  "version": "1.0.2-2024-04-23-18-02-03",
+  "version": "2.0.0",
   "description": "OpenAPI client for @bigration/studio-api-interface",
   "author": "OpenAPI-Generator",
   "repository": {
