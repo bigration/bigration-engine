@@ -1,24 +1,25 @@
 import { ActionModelTypeEnum } from '@bigration/studio-api-interface';
 import {
+  consumerConditionalPathTask,
+  consumerFilterTask,
+  consumerGlobalVariablesUpdates,
+  consumerLoggerTask,
+  consumerLoopTask,
+  consumerMailTask,
+  consumerOpenaiTask,
+  consumerParallelTask,
+  consumerRegexTask,
   consumerRestTask,
   consumerTelegramTask,
-  consumerLoopTask,
-  consumerLoggerTask,
-  consumerGlobalVariablesUpdates,
-  consumerParallelTask,
-  consumerConditionalPathTask,
-  consumerMailTask,
+  consumerValueGetterTask,
   multiConditionalPathTask,
   switchCaseTask,
-  consumerOpenaiTask,
-  consumerFilterTask,
-  consumerValueGetterTask,
-  consumerRegexTask,
 } from '../tasks';
+import { HandleActionType } from '../types/message-action-flow-type';
 
 export const ACTIONS_TYPE_HANDLES: Record<
   ActionModelTypeEnum,
-  any | undefined //TODO HandleActionType
+  HandleActionType | undefined
 > = {
   WORKFLOW_EVENT: undefined,
   LOGGER: consumerLoggerTask,

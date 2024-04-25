@@ -91,6 +91,9 @@ devDependencies:
   '@swc/helpers':
     specifier: ~0.5.2
     version: 0.5.2
+  '@types/handlebars-helpers':
+    specifier: ^0.5.6
+    version: 0.5.6
   '@types/jest':
     specifier: ^29.4.0
     version: 29.4.0
@@ -3592,6 +3595,15 @@ packages:
       }
     dependencies:
       '@types/node': 18.16.9
+    dev: true
+
+  /@types/handlebars-helpers@0.5.6:
+    resolution:
+      {
+        integrity: sha512-1/7AJ2Amfyfwjfrt9LykeVheFt6tgVb5n+C1v80S/FoH3uJ0RWAjWWIvf6Y6l+FyS1qX+MdQoj5v+f8oVvF/5w==,
+      }
+    dependencies:
+      handlebars: 4.7.8
     dev: true
 
   /@types/istanbul-lib-coverage@2.0.6:
@@ -7561,7 +7573,6 @@ packages:
       wordwrap: 1.0.0
     optionalDependencies:
       uglify-js: 3.17.4
-    dev: false
 
   /har-schema@2.0.0:
     resolution:
