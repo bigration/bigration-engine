@@ -41,6 +41,7 @@ jobs:
       - run: pnpm nx build bigration-engine
       - run: sh build-engine.sh
   docker:
+    needs: [install-test-build]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
