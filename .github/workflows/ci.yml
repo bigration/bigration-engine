@@ -30,6 +30,7 @@ jobs:
         with:
           node-version: 20
           cache: 'pnpm'
+      - run: pnpm preinstall
       - run: pnpm install --frozen-lockfile
       - uses: nrwl/nx-set-shas@v4
 
