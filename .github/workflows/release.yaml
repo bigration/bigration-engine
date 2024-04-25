@@ -73,5 +73,5 @@ jobs:
           context: .
           file: deployment/bigration-engine/Dockerfile
           push: true
-          tags: bigration/engine:$RELEASE_VERSION
+          tags: bigration/engine:${{ env.RELEASE_VERSION }}
           attests: type=sbom,mode=max
